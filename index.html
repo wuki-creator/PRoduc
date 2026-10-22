@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f5f2" />
+    <title>织序 · 产品编辑器</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#project" aria-label="织序工作台">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span><strong>织序</strong><small>PRODUCT STUDIO</small></span>
+        </a>
+
+        <button class="workspace-switcher" type="button">
+          <span class="workspace-avatar">栖</span>
+          <span class="workspace-copy"><strong>栖木设计组</strong><small>个人工作区</small></span>
+          <span class="chevron">⌄</span>
+        </button>
+
+        <div class="nav-caption">工作区</div>
+        <nav class="primary-nav" aria-label="产品模块">
+          <button class="nav-item" data-view="project"><span class="nav-icon">◫</span><span>项目</span></button>
+          <button class="nav-item active" data-view="tasks"><span class="nav-icon">☷</span><span>任务</span><span class="nav-count">04</span></button>
+          <button class="nav-item" data-view="forms"><span class="nav-icon">▤</span><span>任务配置表单</span></button>
+          <button class="nav-item" data-view="controls"><span class="nav-icon">◉</span><span>控件</span></button>
+          <button class="nav-item" data-view="flows"><span class="nav-icon">⌘</span><span>动线</span></button>
+          <button class="nav-item" data-view="features"><span class="nav-icon">✳</span><span>功能</span></button>
+          <button class="nav-item" data-view="interfaces"><span class="nav-icon">▣</span><span>界面</span></button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="usage-card">
+            <div class="usage-head"><span class="usage-dot"></span><span>本月运行</span><strong>68%</strong></div>
+            <div class="usage-bar"><i></i></div>
+            <small>已使用 680 / 1,000 次</small>
+          </div>
+          <button class="nav-item help-button" type="button"><span class="nav-icon">?</span><span>帮助与反馈</span></button>
+          <button class="profile-button" type="button">
+            <span class="profile-avatar">林</span>
+            <span class="workspace-copy"><strong>林间工作室</strong><small>专业版</small></span>
+            <span class="more-dots">•••</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>栖木设计组</span><b>/</b><span>产品工作台</span><b>/</b><strong id="crumb-current">任务</strong></div>
+          <div class="top-actions">
+            <span class="save-state"><i></i><span id="save-label">所有更改已保存</span></span>
+            <button class="icon-button" type="button" aria-label="搜索">⌕</button>
+            <button class="icon-button notification-button" type="button" aria-label="通知">♧<i></i></button>
+            <span class="top-avatar">林</span>
+          </div>
+        </header>
+        <div id="view-content" class="view-content"></div>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
